@@ -1555,14 +1555,20 @@ transform:scale(1.02);
     overflow:hidden;
 
 }
-
 .gallery-item img{
-
-    display:block;
 
     width:100%;
 
-    aspect-ratio:16/10;
+    aspect-ratio:2.6/1;
+
+    object-fit:cover;
+
+}
+.gallery-item img{
+
+    width:100%;
+
+    aspect-ratio:2.6/1;
 
     object-fit:cover;
 
