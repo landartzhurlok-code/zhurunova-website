@@ -1145,3 +1145,17 @@ h1{
     background:#a17860;
 
 }
+
+.contact-note{
+
+    margin-top:8px;
+
+    margin-bottom:0;
+
+    font-size:12px;
+
+    line-height:1.6;
+
+    color:var(--text-light);
+
+}
