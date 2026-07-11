@@ -718,7 +718,7 @@ section{
 
     border-top:1px solid var(--line);
 
-    padding:80px 0;
+    padding:45px 0 35px;
 
 }
 
@@ -730,7 +730,7 @@ section{
 
 .contact h2{
 
-    margin-bottom:45px;
+    margin-bottom:24px;
 
     text-align:left;
 
