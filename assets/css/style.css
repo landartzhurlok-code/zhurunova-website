@@ -1,28 +1,30 @@
-/* =========================================================
+/* ===========================================================
    MARHARYTA ZHURUNOVA
-   ========================================================= */
+   PART 1
+   Base / Typography / Header / Hero
+=========================================================== */
 
 :root{
 
-    --bg:#4c3a30;
-    --surface:#564135;
+    --bg:#5d4433;
+    --bg-dark:#553e2f;
 
-    --text:#f4efe9;
-    --text-light:#d6c8ba;
+    --surface:#6a4e3b;
 
-    --line:rgba(255,255,255,.12);
+    --text:#f2ede7;
+    --text-soft:#d8c8b6;
 
-    --hover:rgba(0,0,0,.45);
+    --line:rgba(255,255,255,.08);
 
-    --container:1120px;
-    --text-width:760px;
+    --container:880px;
+    --text-width:560px;
 
-    --transition:.35s ease;
+    --transition:.3s ease;
 
 }
 
 
-/* ========================================================= */
+/* ================= RESET ================= */
 
 *{
 
@@ -44,23 +46,23 @@ body{
 
     color:var(--text);
 
-    font-family:'Manrope',sans-serif;
+    font-family:"Manrope",sans-serif;
 
-    font-size:16px;
+    font-size:14px;
 
-    line-height:1.8;
+    line-height:1.95;
 
     font-weight:300;
 
+    -webkit-font-smoothing:antialiased;
+
+    text-rendering:optimizeLegibility;
+
 }
-
-
-/* ========================================================= */
 
 img{
 
     display:block;
-
     width:100%;
 
 }
@@ -68,80 +70,97 @@ img{
 a{
 
     color:inherit;
-
     text-decoration:none;
+
+    transition:var(--transition);
 
 }
 
 .container{
 
     width:min(92%,var(--container));
-
     margin:auto;
 
 }
 
 .narrow{
 
-    max-width:760px;
+    max-width:var(--text-width);
 
 }
 
 
-/* ========================================================= */
 
-h1,h2,h3{
+/* ================= TYPOGRAPHY ================= */
 
-    font-family:"Cormorant Garamond",serif;
+h1,
+h2,
+h3,
+h4{
 
-    font-weight:400;
+    font-family:"Manrope",sans-serif;
 
-    letter-spacing:.02em;
+    font-weight:300;
+
+    letter-spacing:-.03em;
 
 }
 
 h1{
 
-    font-size:72px;
+    font-size:42px;
 
-    line-height:0.95;
+    line-height:1.15;
 
-    margin-bottom:48px;
+    margin-bottom:36px;
 
 }
 
 h2{
 
-    font-size:44px;
+    font-size:24px;
 
-    margin-bottom:40px;
+    font-weight:400;
+
+    margin-bottom:36px;
 
 }
 
 h3{
 
-    font-size:28px;
+    font-size:18px;
+
+    font-weight:400;
+
+    margin-bottom:10px;
 
 }
 
 p{
 
-    margin-bottom:24px;
+    color:var(--text-soft);
 
-    color:var(--text-light);
+    margin-bottom:22px;
 
 }
 
 small{
 
-    color:var(--text-light);
+    color:var(--text-soft);
+
+}
+
+::selection{
+
+    background:#b08a69;
+
+    color:white;
 
 }
 
 
-/* ========================================================= */
-/* HEADER */
-/* ========================================================= */
+
+/* ================= HEADER ================= */
 
 .site-header{
 
@@ -149,11 +168,11 @@ small{
 
     top:0;
 
-    z-index:999;
+    z-index:1000;
 
-    backdrop-filter:blur(16px);
+    background:rgba(93,68,51,.96);
 
-    background:rgba(76,58,48,.92);
+    backdrop-filter:blur(10px);
 
     border-bottom:1px solid var(--line);
 
@@ -161,25 +180,31 @@ small{
 
 .header-container{
 
-    display:flex;
+    height:82px;
 
-    justify-content:space-between;
+    display:flex;
 
     align-items:center;
 
-    height:92px;
+    justify-content:space-between;
 
 }
 
 .logo{
 
-    font-family:"Cormorant Garamond";
+    display:flex;
 
-    font-size:32px;
+    flex-direction:column;
 
-    line-height:0.92;
+    font-size:16px;
 
-    letter-spacing:.05em;
+    font-weight:300;
+
+    letter-spacing:.16em;
+
+    line-height:1.15;
+
+    text-transform:uppercase;
 
 }
 
@@ -187,21 +212,29 @@ small{
 
     display:flex;
 
-    gap:44px;
+    gap:34px;
 
 }
 
 .navigation a{
 
-    font-size:15px;
+    font-size:13px;
+
+    font-weight:400;
+
+    color:var(--text-soft);
 
     position:relative;
-
-    transition:var(--transition);
 
 }
 
 .navigation a:hover{
+
+    color:white;
+
+}
+
+.navigation a.active{
 
     color:white;
 
@@ -213,9 +246,9 @@ small{
 
     position:absolute;
 
-    bottom:-8px;
-
     left:0;
+
+    bottom:-10px;
 
     width:100%;
 
@@ -226,13 +259,12 @@ small{
 }
 
 
-/* ========================================================= */
-/* HERO */
-/* ========================================================= */
+
+/* ================= HERO ================= */
 
 .hero{
 
-    padding:120px 0;
+    padding:80px 0 90px;
 
 }
 
@@ -240,9 +272,9 @@ small{
 
     display:grid;
 
-    grid-template-columns:430px 1fr;
+    grid-template-columns:320px 1fr;
 
-    gap:90px;
+    gap:72px;
 
     align-items:center;
 
@@ -250,11 +282,13 @@ small{
 
 .hero-image{
 
-    overflow:hidden;
+    width:320px;
 
 }
 
 .hero-image img{
+
+    width:100%;
 
     aspect-ratio:4/5;
 
@@ -264,14 +298,19 @@ small{
 
 .hero-content{
 
-    max-width:540px;
+    max-width:500px;
+
+}
+
+.hero-content p{
+
+    max-width:480px;
 
 }
 
 
-/* ========================================================= */
-/* SECTION TITLE */
-/* ========================================================= */
+
+/* ================= SECTION TITLE ================= */
 
 .section-title{
 
@@ -281,19 +320,25 @@ small{
 
     align-items:flex-end;
 
-    margin-bottom:56px;
+    margin-bottom:34px;
+
+    padding-bottom:18px;
 
     border-bottom:1px solid var(--line);
 
-    padding-bottom:18px;
+}
+
+.section-title h2{
+
+    margin:0;
 
 }
 
 .section-title a{
 
-    font-size:14px;
+    font-size:13px;
 
-    color:var(--text-light);
+    color:var(--text-soft);
 
 }
 
@@ -304,13 +349,28 @@ small{
 }
 
 
-/* ========================================================= */
-/* WORK GRID */
-/* ========================================================= */
+
+/* ================= SPACING ================= */
+
+section{
+
+    margin-bottom:90px;
+
+}
+
+/* ===========================================================
+   PART 2
+   Selected works / Portfolio / Project / Contact / Footer
+=========================================================== */
+
+
+/* =======================
+   SELECTED WORKS
+======================= */
 
 .selected-works{
 
-    padding-bottom:120px;
+    margin-bottom:120px;
 
 }
 
@@ -320,7 +380,7 @@ small{
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:28px;
+    gap:20px;
 
 }
 
@@ -330,25 +390,33 @@ small{
 
     overflow:hidden;
 
+    background:#3d2d23;
+
     display:block;
 
 }
 
 .work-card img{
 
-    aspect-ratio:5/3;
+    width:100%;
+
+    aspect-ratio:16/10;
 
     object-fit:cover;
 
-    transition:.6s;
+    transition:.45s ease;
 
 }
 
 .work-card:hover img{
 
-    transform:scale(1.04);
+    transform:scale(1.02);
 
 }
+
+
+
+/* ---------- overlay ---------- */
 
 .overlay{
 
@@ -356,7 +424,7 @@ small{
 
     inset:0;
 
-    background:var(--hover);
+    background:rgba(0,0,0,.38);
 
     display:flex;
 
@@ -368,7 +436,7 @@ small{
 
     opacity:0;
 
-    transition:var(--transition);
+    transition:.3s;
 
 }
 
@@ -380,104 +448,42 @@ small{
 
 .overlay h3{
 
-    font-size:36px;
+    margin:0;
 
-    margin-bottom:10px;
+    margin-bottom:6px;
+
+    font-size:18px;
+
+    font-weight:400;
+
+    color:white;
+
+    letter-spacing:.03em;
 
 }
 
 .overlay span{
 
-    font-size:15px;
+    font-size:12px;
 
-    letter-spacing:.08em;
+    color:#efe6dc;
 
-    color:var(--text-light);
+    letter-spacing:.15em;
 
-}
-
-
-/* ========================================================= */
-/* CONTACT */
-/* ========================================================= */
-
-.contact{
-
-    padding:120px 0;
-
-    border-top:1px solid var(--line);
-
-}
-
-.contact-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:40px;
-
-}
-
-.contact h3{
-
-    font-size:22px;
-
-    margin-bottom:14px;
-
-}
-
-.contact a{
-
-    color:var(--text-light);
-
-}
-
-.contact a:hover{
-
-    color:white;
+    text-transform:uppercase;
 
 }
 
 
-/* ========================================================= */
-/* FOOTER */
-/* ========================================================= */
-
-footer{
-
-    border-top:1px solid var(--line);
-
-    padding:30px 0;
-
-}
-
-.footer-container{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-}
-
-footer p{
-
-    margin:0;
-
-    font-size:14px;
-
-}
 
 
-/* ========================================================= */
-/* PORTFOLIO */
-/* ========================================================= */
+/* =======================
+   PORTFOLIO PAGE
+======================= */
 
 .portfolio{
 
-    padding:110px 0;
+    padding-top:20px;
 
 }
 
@@ -487,74 +493,123 @@ footer p{
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:28px;
+    gap:20px;
+
+}
+
+.portfolio-grid .work-card{
+
+    background:#3d2d23;
 
 }
 
 
-/* ========================================================= */
-/* PROJECT */
-/* ========================================================= */
+
+
+/* =======================
+   PROJECT
+======================= */
 
 .project{
 
-    padding:110px 0;
+    padding-top:20px;
 
 }
+
+
 
 .project-header{
 
-    max-width:760px;
+    max-width:560px;
 
     margin:auto;
 
-    margin-bottom:80px;
+    margin-bottom:56px;
 
 }
+
+
 
 .project-title{
 
-    margin-bottom:12px;
+    font-size:34px;
+
+    font-weight:300;
+
+    margin-bottom:8px;
 
 }
+
+
 
 .project-year{
 
-    color:var(--text-light);
+    font-size:13px;
 
-    margin-bottom:36px;
+    color:var(--text-soft);
+
+    margin-bottom:28px;
 
 }
+
+
+
+.project-description{
+
+    color:var(--text-soft);
+
+}
+
+
 
 .project-cover{
 
-    margin-bottom:60px;
+    margin:60px auto;
+
+    max-width:880px;
 
 }
+
+
 
 .project-cover img{
 
     width:100%;
 
+    display:block;
+
 }
+
+
+
+
+/* ---------- gallery ---------- */
 
 .gallery{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    grid-template-columns:repeat(3,1fr);
 
-    gap:18px;
+    gap:14px;
 
 }
+
+
 
 .gallery img{
 
+    aspect-ratio:4/3;
+
+    object-fit:cover;
+
     cursor:pointer;
 
-    transition:var(--transition);
+    transition:.25s;
 
 }
+
+
 
 .gallery img:hover{
 
@@ -563,25 +618,225 @@ footer p{
 }
 
 
-/* ========================================================= */
-/* CV */
-/* ========================================================= */
+
+
+
+/* =======================
+   LIGHTBOX
+======================= */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.92);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.25s;
+
+    z-index:9999;
+
+}
+
+
+
+.lightbox.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+
+.lightbox img{
+
+    max-width:92vw;
+
+    max-height:92vh;
+
+    object-fit:contain;
+
+}
+
+
+
+.lightbox-close{
+
+    position:absolute;
+
+    top:32px;
+
+    right:40px;
+
+    font-size:34px;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+/* =======================
+   CONTACT
+======================= */
+
+.contact{
+
+    border-top:1px solid var(--line);
+
+    padding-top:70px;
+
+}
+
+
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:60px;
+
+}
+
+
+
+.contact h3{
+
+    font-size:14px;
+
+    font-weight:500;
+
+    margin-bottom:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+}
+
+
+
+.contact a{
+
+    color:var(--text-soft);
+
+}
+
+
+
+.contact a:hover{
+
+    color:white;
+
+}
+
+
+
+
+/* =======================
+   FOOTER
+======================= */
+
+footer{
+
+    margin-top:90px;
+
+    border-top:1px solid var(--line);
+
+}
+
+
+
+.footer-container{
+
+    padding:24px 0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+.footer-container p{
+
+    margin:0;
+
+    font-size:12px;
+
+    color:var(--text-soft);
+
+}
+
+/* ===========================================================
+   PART 3
+   CV / Mobile / Utility
+=========================================================== */
+
+
+/* ==========================
+   CV
+========================== */
 
 .cv{
 
-    padding:110px 0;
+    padding-top:20px;
 
 }
 
 .cv .container{
 
-    max-width:760px;
+    max-width:560px;
+
+}
+
+.cv h1{
+
+    margin-bottom:50px;
 
 }
 
 .cv h2{
 
-    margin-top:80px;
+    margin-top:70px;
+
+    margin-bottom:22px;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+}
+
+.cv p{
+
+    margin-bottom:18px;
 
 }
 
@@ -593,134 +848,393 @@ footer p{
 
 .cv li{
 
-    padding:10px 0;
+    padding:12px 0;
 
     border-bottom:1px solid rgba(255,255,255,.05);
 
-    color:var(--text-light);
+    color:var(--text-soft);
+
+}
+
+.cv strong{
+
+    color:var(--text);
+
+    font-weight:500;
 
 }
 
 
-/* ========================================================= */
-/* MOBILE */
-/* ========================================================= */
 
-@media(max-width:960px){
+/* ==========================
+   LINKS
+========================== */
 
-.hero-grid{
+a{
 
-grid-template-columns:1fr;
-
-gap:60px;
+    transition:.25s;
 
 }
 
-.hero-image{
+a:hover{
 
-max-width:500px;
-
-}
-
-.works-grid{
-
-grid-template-columns:1fr;
+    opacity:.82;
 
 }
 
-.portfolio-grid{
 
-grid-template-columns:1fr;
+
+/* ==========================
+   IMAGES
+========================== */
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
 
 }
 
-.contact-grid{
 
-grid-template-columns:1fr;
 
-gap:60px;
+/* ==========================
+   FADE
+========================== */
+
+.hero,
+.selected-works,
+.portfolio,
+.project,
+.contact,
+.cv{
+
+    animation:fade .45s ease;
 
 }
 
-.navigation{
+@keyframes fade{
 
-gap:22px;
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:900px){
+
+.container{
+
+    width:90%;
+
+}
+
+.site-header{
+
+    position:relative;
 
 }
 
 .header-container{
 
-flex-direction:column;
+    height:auto;
 
-height:auto;
+    padding:28px 0;
 
-padding:24px 0;
+    flex-direction:column;
 
-gap:18px;
+    align-items:flex-start;
 
-}
-
-h1{
-
-font-size:56px;
-
-}
-
-h2{
-
-font-size:38px;
-
-}
-
-}
-
-
-@media(max-width:640px){
-
-.hero{
-
-padding:70px 0;
-
-}
-
-.selected-works{
-
-padding-bottom:70px;
-
-}
-
-.contact{
-
-padding:70px 0;
-
-}
-
-.section-title{
-
-display:block;
-
-}
-
-.section-title a{
-
-display:inline-block;
-
-margin-top:18px;
-
-}
-
-.logo{
-
-font-size:24px;
+    gap:22px;
 
 }
 
 .navigation{
 
-flex-wrap:wrap;
+    width:100%;
 
-justify-content:center;
+    justify-content:flex-start;
+
+    gap:22px;
+
+    flex-wrap:wrap;
 
 }
+
+.logo{
+
+    font-size:15px;
+
+}
+
+.hero{
+
+    padding:40px 0 70px;
+
+}
+
+.hero-grid{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+.hero-image{
+
+    width:100%;
+
+    max-width:340px;
+
+}
+
+.hero-content{
+
+    max-width:100%;
+
+}
+
+h1{
+
+    font-size:34px;
+
+}
+
+h2{
+
+    font-size:22px;
+
+}
+
+.section-title{
+
+    display:block;
+
+}
+
+.section-title h2{
+
+    margin-bottom:14px;
+
+}
+
+.section-title a{
+
+    display:inline-block;
+
+}
+
+.works-grid{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+}
+
+.portfolio-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.gallery{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.contact-grid{
+
+    grid-template-columns:1fr;
+
+    gap:34px;
+
+}
+
+.project-cover{
+
+    margin:40px auto;
+
+}
+
+}
+
+
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media (max-width:600px){
+
+body{
+
+    font-size:13px;
+
+}
+
+.container{
+
+    width:92%;
+
+}
+
+.navigation{
+
+    gap:16px;
+
+}
+
+.navigation a{
+
+    font-size:12px;
+
+}
+
+.logo{
+
+    font-size:14px;
+
+}
+
+.hero{
+
+    padding:30px 0 55px;
+
+}
+
+h1{
+
+    font-size:28px;
+
+    margin-bottom:24px;
+
+}
+
+h2{
+
+    font-size:20px;
+
+}
+
+.works-grid{
+
+    gap:14px;
+
+}
+
+.portfolio-grid{
+
+    gap:14px;
+
+}
+
+.gallery{
+
+    grid-template-columns:1fr;
+
+    gap:12px;
+
+}
+
+.overlay h3{
+
+    font-size:16px;
+
+}
+
+.overlay span{
+
+    font-size:11px;
+
+}
+
+.contact{
+
+    padding-top:50px;
+
+}
+
+footer{
+
+    margin-top:60px;
+
+}
+
+.footer-container{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+}
+
+}
+
+
+
+/* ==========================
+   LARGE SCREENS
+========================== */
+
+@media (min-width:1600px){
+
+:root{
+
+    --container:920px;
+
+}
+
+}
+
+
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--bg);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#8a6750;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#a27a60;
 
 }
