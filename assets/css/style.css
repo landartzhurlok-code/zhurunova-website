@@ -718,7 +718,7 @@ section{
 
     border-top:1px solid var(--line);
 
-    padding:45px 0 35px;
+    padding:40px 0 30px;
 
 }
 
@@ -730,7 +730,7 @@ section{
 
 .contact h2{
 
-    margin-bottom:24px;
+    margin-bottom:28px;
 
     text-align:left;
 
@@ -742,7 +742,7 @@ section{
 
     grid-template-columns:repeat(4,1fr);
 
-    gap:32px;
+    gap:24px;
 
     align-items:start;
 
@@ -762,7 +762,7 @@ section{
 
 .contact h3{
 
-    font-size:12px;
+    font-size:11px;
 
     font-weight:600;
 
@@ -770,15 +770,21 @@ section{
 
     letter-spacing:.08em;
 
-    margin-bottom:14px;
+    margin-bottom:8px;
+
+    color:var(--text);
 
 }
 
 .contact a{
 
+    display:block;
+
     color:var(--text-light);
 
-    line-height:1.6;
+    font-size:13px;
+
+    line-height:1.45;
 
 }
 
@@ -790,18 +796,17 @@ section{
 
 .contact-note{
 
-    margin-top:8px;
+    margin-top:4px;
 
-    font-size:12px;
+    font-size:11px;
 
-    line-height:1.6;
+    line-height:1.45;
 
     color:var(--text-light);
 
-    text-align:center;
+    max-width:180px;
 
 }
-
 
 /* =========================
    CV
