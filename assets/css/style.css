@@ -1833,3 +1833,43 @@ transform:scale(1.02);
     }
 
 }
+
+/* ===========================================================
+   WORKS — GLIGHTBOX DESCRIPTIONS
+=========================================================== */
+
+.work-description {
+    display: none;
+}
+
+.glightbox-container .work-description {
+    display: block;
+    max-width: 560px;
+    margin: 25px auto 0;
+    padding: 0 20px;
+    color: #fff;
+    text-align: left;
+}
+
+.glightbox-container .work-description h3 {
+    margin: 0 0 12px;
+    color: #fff;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.glightbox-container .work-description p {
+    margin: 2px 0;
+    color: rgba(255,255,255,.8);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.glightbox-container .work-description a {
+    display: inline-block;
+    margin-top: 14px;
+    color: #fff;
+    font-size: 13px;
+    text-decoration: underline;
+}
