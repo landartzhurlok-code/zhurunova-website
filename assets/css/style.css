@@ -1834,31 +1834,39 @@ transform:scale(1.02);
 
 }
 
-/* =========================
-   WORKS GLIGHTBOX INFO
-========================= */
+/* ===========================================================
+   WORKS — GLIGHTBOX DESCRIPTIONS
+=========================================================== */
 
-.gslide-description {
-    background: rgba(0, 0, 0, 0.78) !important;
+.work-description {
+    display: none;
+}
+
+.glightbox-container .gslide-description {
+    background: rgba(0, 0, 0, 0.72) !important;
     color: #fff !important;
-    padding: 16px 22px !important;
+    padding: 14px 20px !important;
     box-sizing: border-box;
 }
 
-.gslide-description .gdesc-inner {
-    padding: 0 !important;
+.glightbox-container .gslide-description p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 3px 0;
 }
 
-.gslide-description p {
-    margin: 0 !important;
-    color: rgba(255,255,255,.82) !important;
+.glightbox-container .gslide-description p:first-child {
+    margin-top: 0;
 }
 
-.gslide-description a {
+.glightbox-container .gslide-description a {
     color: #fff !important;
     text-decoration: underline;
 }
 
-.gslide-description strong {
+.glightbox-container .gslide-description strong {
     color: #fff !important;
+    font-weight: 500;
 }
