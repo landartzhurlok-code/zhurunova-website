@@ -63,33 +63,25 @@ ZHURUNOVA
 
 
 <!-- 1111111111111111111111111111 -->
-
 <a
     href="assets/images/projects/project1_3.jpg"
     class="masonry-item"
-    data-glightbox="description: .description-01;"
+    data-title=""
+    data-description="
+        <em>From the series Disappearing Landscapes</em><br>
+        handprinted monotype, painting<br>
+        24 × 79 cm<br>
+        1/1<br>
+        <strong>Available</strong><br>
+        <a href='projects/project1.html'>View project →</a>
+    "
 >
     <img
         src="assets/images/projects/project1_3.jpg"
         alt="Disappearing Landscapes"
     >
 </a>
-
-<div class="description-03 work-description">
-
-    <p><em>From the series Disappearing Landscapes</em></p>
-    <p>handprinted monotype, painting</p>
-    <p>24 × 79 cm</p>
-    <p>1/1</p>
-    <p><strong>Available</strong></p>
-
-    <p>
-        <a href="projects/project1.html">
-            View project →
-        </a>
-    </p>
-
-</div>
+    
 
 
     <a
@@ -233,45 +225,6 @@ const lightbox = GLightbox({
     touchNavigation: true,
     loop: true,
     zoomable: true
-});
-
-function resizeDescription() {
-
-    const slide = document.querySelector('.gslide.current');
-
-    if (!slide) return;
-
-    const image = slide.querySelector('.gslide-media');
-    const description = slide.querySelector('.gslide-description');
-
-    if (!image || !description) return;
-
-    const width = image.getBoundingClientRect().width;
-
-    description.style.width = width + 'px';
-    description.style.maxWidth = width + 'px';
-}
-
-lightbox.on('open', function() {
-
-    setTimeout(resizeDescription, 100);
-    setTimeout(resizeDescription, 400);
-
-});
-
-lightbox.on('slide_changed', function() {
-
-    setTimeout(resizeDescription, 100);
-    setTimeout(resizeDescription, 400);
-
-});
-
-window.addEventListener('resize', function() {
-
-    if (document.querySelector('.gslide.current')) {
-        resizeDescription();
-    }
-
 });
 
 </script>
