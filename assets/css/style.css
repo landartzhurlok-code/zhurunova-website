@@ -1835,10 +1835,10 @@ transform:scale(1.02);
 }
 
 /* ===========================================================
-   WORKS — GLIGHTBOX DESCRIPTIONS
+   WORKS — GLIGHTBOX DESCRIPTION
 =========================================================== */
 
-.work-description {
+.glightbox-desc {
     display: none;
 }
 
