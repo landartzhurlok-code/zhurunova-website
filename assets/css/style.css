@@ -1835,7 +1835,9 @@ transform:scale(1.02);
 }
 
 
-/* WORKS — LIGHTBOX DESCRIPTION */
+/* ===========================================================
+   WORKS — GLIGHTBOX
+=========================================================== */
 
 .glightbox-desc {
     display: none;
@@ -1843,29 +1845,30 @@ transform:scale(1.02);
 
 .glightbox-container .gslide-description {
     display: block !important;
+    background: #fff !important;
 }
 
 .glightbox-container .gdesc-inner {
-    padding: 20px 24px !important;
+    padding: 24px 28px 28px !important;
 }
 
 .glightbox-container .gdesc-inner p {
-    margin: 0 0 5px;
-    color: rgba(255,255,255,.8);
-    font-family: "Manrope", sans-serif;
-    font-size: 13px;
-    line-height: 1.6;
+    margin: 0 0 4px !important;
+    color: #7B5542 !important;
+    font-family: "Manrope", sans-serif !important;
+    font-size: 13px !important;
+    line-height: 1.6 !important;
 }
 
 .glightbox-container .gdesc-inner p:first-child {
-    margin-bottom: 12px;
+    margin-bottom: 12px !important;
 }
 
 .glightbox-container .gdesc-inner a {
-    color: #fff;
-    text-decoration: underline;
+    color: #7B5542 !important;
+    text-decoration: underline !important;
 }
 
 .glightbox-container .gdesc-inner strong {
-    font-weight: 500;
+    font-weight: 500 !important;
 }
