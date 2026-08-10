@@ -63,10 +63,12 @@ ZHURUNOVA
 
 
 <!-- Detection -->
+
+    
 <a
     href="assets/images/projects/project1_1.jpg"
     class="masonry-item"
-    data-glightbox="title: Detection; description: .description-01"
+    data-glightbox="title: Detection; description: .description-01;"
 >
     <img
         src="assets/images/projects/project1_1.jpg"
@@ -74,21 +76,18 @@ ZHURUNOVA
     >
 </a>
 
-<div class="glightbox-desc description-01">
-
+    <div class="glightbox-desc description-01">
     <p><em>From the series Detection</em></p>
     <p>Monotype</p>
     <p>56 × 76 cm</p>
     <p>1/1</p>
     <p><strong>Available</strong></p>
-
     <p>
-        <a href="projects/detection.html">
-            View project →
-        </a>
+        <a href="projects/detection.html">View project →</a>
     </p>
-
 </div>
+    
+
 
     <a
     href="assets/images/projects/project1_2.jpg"
@@ -516,22 +515,14 @@ data-description="<p><em>From the series ...</em></p><p>Technique</p><p>56 × 76
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
-
-GLightbox({
-
+const lightbox = GLightbox({
     selector: '.masonry-item',
-
     touchNavigation: true,
-
     loop: true,
-
     zoomable: true,
-
     draggable: true
-
 });
-
 </script>
-
+    
 </body>
 </html>
