@@ -1886,3 +1886,37 @@ transform:scale(1.02);
 .gslide-description {
     width: 100% !important;
 }
+
+
+/* ===========================================================
+   ARTIST PHOTOS
+=========================================================== */
+
+.artist-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 70px;
+    margin-bottom: 90px;
+}
+
+.artist-photos img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .artist-photos {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+
+}
