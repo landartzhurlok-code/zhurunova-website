@@ -1838,31 +1838,51 @@ transform:scale(1.02);
    WORKS — GLIGHTBOX DESCRIPTION
 =========================================================== */
 
+/* Source descriptions are hidden on the page */
 .glightbox-desc {
-    display: none;
+    display: none !important;
 }
 
+/* Hide GLightbox title completely */
 .gslide-title {
     display: none !important;
 }
 
+/* Description panel */
 .gslide-description {
+    display: block !important;
     background: rgba(0, 0, 0, 0.72) !important;
     color: #fff !important;
-    padding: 16px 22px !important;
+    padding: 14px 20px !important;
     box-sizing: border-box !important;
     margin: 0 auto !important;
     font-family: "Manrope", sans-serif !important;
     font-size: 12px !important;
-    line-height: 1.6 !important;
+    line-height: 1.5 !important;
 }
 
+/* Text inside description */
 .gslide-description p {
     margin: 2px 0 !important;
     color: rgba(255,255,255,0.85) !important;
 }
 
+/* Link */
 .gslide-description a {
     color: #fff !important;
     text-decoration: underline !important;
+}
+
+/* Make description width equal to image width */
+.gslide-inner-content {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.gslide-media {
+    margin-bottom: 0 !important;
+}
+
+.gslide-description {
+    width: 100% !important;
 }
