@@ -1837,26 +1837,14 @@ transform:scale(1.02);
    WORKS — GLIGHTBOX DESCRIPTION
 =========================================================== */
 
-.glightbox-container .gslide-inner {
-    width: fit-content !important;
-    max-width: 92vw !important;
-    margin: 0 auto !important;
-}
-
-.glightbox-container .gslide-media {
-    width: auto !important;
-    max-width: 92vw !important;
-}
-
 .glightbox-container .gslide-description {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-
+    display: block !important;
     background: rgba(247, 242, 236, 0.72) !important;
 
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+
+    margin: 0 auto !important;
 }
 
 .glightbox-container .gdesc-inner {
