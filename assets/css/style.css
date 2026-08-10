@@ -1920,3 +1920,32 @@ transform:scale(1.02);
     }
 
 }
+
+/* ===========================================================
+   CV
+=========================================================== */
+
+.cv-page .container {
+    max-width: 925px;
+    margin: 0 auto;
+}
+
+.cv-page ul {
+    list-style: disc;
+    padding-left: 22px;
+    margin: 0;
+}
+
+.cv-page li {
+    padding-left: 4px;
+    margin-bottom: 10px;
+}
+
+.cv-page h2 {
+    margin-top: 70px;
+    margin-bottom: 32px;
+}
+
+.cv-page p {
+    margin-bottom: 12px;
+}
