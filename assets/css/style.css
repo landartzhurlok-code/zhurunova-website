@@ -1834,19 +1834,14 @@ transform:scale(1.02);
 
 }
 
-/* ===========================================================
-   WORKS — GLIGHTBOX DESCRIPTIONS
-=========================================================== */
-
-.work-description {
-    display: none;
-}
+/* =========================
+   WORKS GLIGHTBOX INFO
+========================= */
 
 .gslide-description {
-    background: rgba(0,0,0,.82) !important;
+    background: rgba(0, 0, 0, 0.78) !important;
     color: #fff !important;
-    width: 100% !important;
-    padding: 18px 24px !important;
+    padding: 16px 22px !important;
     box-sizing: border-box;
 }
 
@@ -1855,21 +1850,8 @@ transform:scale(1.02);
 }
 
 .gslide-description p {
-    margin: 3px 0 !important;
-    color: rgba(255,255,255,.78) !important;
-    font-family: "Manrope", sans-serif;
-    font-size: 12px !important;
-    line-height: 1.55 !important;
-}
-
-.gslide-description p:first-child {
-    margin-bottom: 10px !important;
-    color: #fff !important;
-}
-
-.gslide-description strong {
-    color: #fff !important;
-    font-weight: 500;
+    margin: 0 !important;
+    color: rgba(255,255,255,.82) !important;
 }
 
 .gslide-description a {
@@ -1877,6 +1859,6 @@ transform:scale(1.02);
     text-decoration: underline;
 }
 
-.gslide-description a:hover {
-    opacity: .7;
+.gslide-description strong {
+    color: #fff !important;
 }
