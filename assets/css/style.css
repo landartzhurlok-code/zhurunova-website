@@ -1834,27 +1834,35 @@ transform:scale(1.02);
 
 }
 
-
 /* ===========================================================
-   WORKS — GLIGHTBOX
+   WORKS — GLIGHTBOX DESCRIPTION
 =========================================================== */
-
 
 .glightbox-container .gslide-description {
     display: block !important;
-    background: rgba(247, 242, 236, 0.88) !important;
-    max-width: 430px !important;
-    margin: 0 auto !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+
+    background: rgba(247, 242, 236, 0.72) !important;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .glightbox-container .gdesc-inner {
-    padding: 14px 20px 16px !important;
+    padding: 14px 24px 16px !important;
 }
 
 .glightbox-container .gdesc-inner p {
     margin: 0 0 2px !important;
+
     color: #7B5542 !important;
+
     font-family: "Manrope", sans-serif !important;
+
     font-size: 11px !important;
     line-height: 1.45 !important;
 }
