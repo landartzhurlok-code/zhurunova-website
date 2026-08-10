@@ -63,29 +63,43 @@ ZHURUNOVA
 
 
 <!-- 1111111111111111111111111111 -->
+<!-- =========================
+     WORKS
+========================= -->
+
+<!-- DISAPPEARING LANDSCAPES 01 -->
+
 <a
     href="assets/images/projects/project1_3.jpg"
     class="masonry-item"
-    data-description="
-        <p><em>From the series Disappearing Landscapes</em></p>
-        <p>handprinted monotype, painting</p>
-        <p>24 × 79 cm</p>
-        <p>1/1</p>
-        <p><strong>Available</strong></p>
-        <p><a href='projects/project1.html'>View project →</a></p>
-    "
+    data-glightbox="description: .description-01;"
 >
-
     <img
         src="assets/images/projects/project1_3.jpg"
         alt="Disappearing Landscapes"
     >
-
 </a>
-    
+
+<div class="description-01 work-description">
+
+    <p><em>From the series Disappearing Landscapes</em></p>
+    <p>handprinted monotype, painting</p>
+    <p>24 × 79 cm</p>
+    <p>1/1</p>
+    <p><strong>Available</strong></p>
+
+    <p>
+        <a href="projects/project1.html">
+            View project →
+        </a>
+    </p>
+
+</div>
 
 
-    <a
+<!-- DISAPPEARING LANDSCAPES 02 -->
+
+<a
     href="assets/images/projects/project1_4.jpg"
     class="masonry-item"
     data-glightbox="description: .description-02;"
@@ -96,7 +110,7 @@ ZHURUNOVA
     >
 </a>
 
-<div class="glightbox-desc description-02">
+<div class="description-02 work-description">
 
     <p><em>From the series Disappearing Landscapes</em></p>
     <p>handprinted monotype, painting</p>
@@ -112,7 +126,10 @@ ZHURUNOVA
 
 </div>
 
-        <a
+
+<!-- DISAPPEARING LANDSCAPES 03 -->
+
+<a
     href="assets/images/projects/project1_4.jpg"
     class="masonry-item"
     data-glightbox="description: .description-03;"
@@ -123,7 +140,7 @@ ZHURUNOVA
     >
 </a>
 
-<div class="glightbox-desc description-02">
+<div class="description-03 work-description">
 
     <p><em>From the series Disappearing Landscapes</em></p>
     <p>handprinted monotype, painting</p>
@@ -139,14 +156,13 @@ ZHURUNOVA
 
 </div>
 
-    
-<!-- 1 -->
 
+<!-- DETECTION 01 -->
 
 <a
     href="assets/images/projects/project1_1.jpg"
     class="masonry-item"
-     data-glightbox="description: .description-05;"
+    data-glightbox="description: .description-05;"
 >
     <img
         src="assets/images/projects/project1_1.jpg"
@@ -154,7 +170,7 @@ ZHURUNOVA
     >
 </a>
 
-<div class="glightbox-desc description-01">
+<div class="description-05 work-description">
 
     <p><em>From the series Detection</em></p>
     <p>Monotype</p>
@@ -171,12 +187,12 @@ ZHURUNOVA
 </div>
 
 
+<!-- DETECTION 02 -->
 
-    
 <a
     href="assets/images/projects/project1_1.jpg"
     class="masonry-item"
-     data-glightbox="description: .description-06;"
+    data-glightbox="description: .description-06;"
 >
     <img
         src="assets/images/projects/project1_1.jpg"
@@ -184,7 +200,7 @@ ZHURUNOVA
     >
 </a>
 
-<div class="glightbox-desc description-01">
+<div class="description-06 work-description">
 
     <p><em>From the series Detection</em></p>
     <p>Monotype</p>
@@ -199,7 +215,6 @@ ZHURUNOVA
     </p>
 
 </div>
-
 
     
 
@@ -217,15 +232,19 @@ ZHURUNOVA
 
 </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
 
-const lightbox = GLightbox({
-    selector: '.masonry-item',
-    touchNavigation: true,
-    loop: true,
-    zoomable: true
+document.addEventListener("DOMContentLoaded", function () {
+
+    const lightbox = GLightbox({
+        selector: ".masonry-item",
+        touchNavigation: true,
+        loop: true,
+        zoomable: true
+    });
+
 });
 
 </script>
