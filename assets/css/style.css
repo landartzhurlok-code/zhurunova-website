@@ -1838,35 +1838,45 @@ transform:scale(1.02);
    WORKS — GLIGHTBOX DESCRIPTION
 =========================================================== */
 
-.glightbox-desc {
-    display: none;
-}
-
 .glightbox-container .gslide-description {
     background: rgba(0, 0, 0, 0.72) !important;
     color: #fff !important;
-    padding: 14px 20px !important;
+
     box-sizing: border-box;
+
+    padding: 12px 18px !important;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    min-height: 0 !important;
 }
 
-.glightbox-container .gslide-description p {
-    color: rgba(255, 255, 255, 0.8) !important;
+.glightbox-container .gslide-desc {
+    color: #fff !important;
+
     font-family: "Manrope", sans-serif;
     font-size: 12px;
-    line-height: 1.5;
-    margin: 3px 0;
+    line-height: 1.45;
+
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-.glightbox-container .gslide-description p:first-child {
-    margin-top: 0;
+.glightbox-container .gslide-desc em {
+    color: rgba(255,255,255,0.75);
 }
 
-.glightbox-container .gslide-description a {
+.glightbox-container .gslide-desc strong {
+    color: #fff;
+    font-weight: 500;
+}
+
+.glightbox-container .gslide-desc a {
     color: #fff !important;
     text-decoration: underline;
 }
 
-.glightbox-container .gslide-description strong {
-    color: #fff !important;
-    font-weight: 500;
+.glightbox-container .gslide-title {
+    display: none !important;
 }
