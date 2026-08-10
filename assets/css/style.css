@@ -1839,29 +1839,28 @@ transform:scale(1.02);
    WORKS — GLIGHTBOX
 =========================================================== */
 
-.glightbox-desc {
-    display: none;
-}
 
 .glightbox-container .gslide-description {
     display: block !important;
-    background: #fff !important;
+    background: rgba(247, 242, 236, 0.88) !important;
+    max-width: 430px !important;
+    margin: 0 auto !important;
 }
 
 .glightbox-container .gdesc-inner {
-    padding: 24px 28px 28px !important;
+    padding: 14px 20px 16px !important;
 }
 
 .glightbox-container .gdesc-inner p {
-    margin: 0 0 4px !important;
+    margin: 0 0 2px !important;
     color: #7B5542 !important;
     font-family: "Manrope", sans-serif !important;
-    font-size: 13px !important;
-    line-height: 1.6 !important;
+    font-size: 11px !important;
+    line-height: 1.45 !important;
 }
 
 .glightbox-container .gdesc-inner p:first-child {
-    margin-bottom: 12px !important;
+    margin-bottom: 7px !important;
 }
 
 .glightbox-container .gdesc-inner a {
