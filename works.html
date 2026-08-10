@@ -513,7 +513,7 @@ data-description="<p><em>From the series ...</em></p><p>Technique</p><p>56 × 76
 
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
 
@@ -524,6 +524,46 @@ const lightbox = GLightbox({
     zoomable: true
 });
 
+function resizeDescription() {
+
+    const slide = document.querySelector('.gslide.current');
+
+    if (!slide) return;
+
+    const image = slide.querySelector('.gslide-media');
+    const description = slide.querySelector('.gslide-description');
+
+    if (!image || !description) return;
+
+    const width = image.getBoundingClientRect().width;
+
+    description.style.width = width + 'px';
+    description.style.maxWidth = width + 'px';
+}
+
+lightbox.on('open', function() {
+
+    setTimeout(resizeDescription, 100);
+    setTimeout(resizeDescription, 400);
+
+});
+
+lightbox.on('slide_changed', function() {
+
+    setTimeout(resizeDescription, 100);
+    setTimeout(resizeDescription, 400);
+
+});
+
+window.addEventListener('resize', function() {
+
+    if (document.querySelector('.gslide.current')) {
+        resizeDescription();
+    }
+
+});
+
 </script>
+    
 </body>
 </html>
