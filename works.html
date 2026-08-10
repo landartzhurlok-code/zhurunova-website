@@ -242,18 +242,53 @@ ZHURUNOVA
 
 </footer>
 
-   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
+const lightbox = GLightbox({
+    selector: '.masonry-item',
+    touchNavigation: true,
+    loop: true,
+    zoomable: true,
+    descPosition: 'bottom'
+});
 
-    const lightbox = GLightbox({
-        selector: ".masonry-item",
-        touchNavigation: true,
-        loop: true,
-        zoomable: true
-    });
+lightbox.on('slide_after_load', function(data) {
+
+    const slide = data.slideNode;
+
+    if (!slide) return;
+
+    const media = slide.querySelector('.gslide-media');
+    const description = slide.querySelector('.gslide-description');
+
+    if (!media || !description) return;
+
+    const width = media.getBoundingClientRect().width;
+
+    description.style.width = width + 'px';
+    description.style.maxWidth = width + 'px';
+    description.style.marginLeft = 'auto';
+    description.style.marginRight = 'auto';
+
+});
+
+window.addEventListener('resize', function() {
+
+    const slide = document.querySelector('.gslide.current');
+
+    if (!slide) return;
+
+    const media = slide.querySelector('.gslide-media');
+    const description = slide.querySelector('.gslide-description');
+
+    if (!media || !description) return;
+
+    const width = media.getBoundingClientRect().width;
+
+    description.style.width = width + 'px';
+    description.style.maxWidth = width + 'px';
 
 });
 
