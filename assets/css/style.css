@@ -1839,7 +1839,7 @@ transform:scale(1.02);
 
 .glightbox-container .gslide-description {
     display: block !important;
-    background: rgba(247, 242, 236, 0.72) !important;
+    background: rgba(247, 242, 236, 0.55) !important;
 
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
