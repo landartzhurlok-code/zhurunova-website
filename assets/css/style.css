@@ -1920,79 +1920,107 @@ transform:scale(1.02);
     }
 
 }
-/* ===========================================================
-   PROJECT COVER
-=========================================================== */
-
-.project-cover {
-    display: block;
-    width: 100%;
-    max-width: 650px;
-    height: auto;
-    margin: 0 auto;
-}
-
 
 /* ===========================================================
-   PROJECT GALLERY — 3 × GRID
-   PROJECT 2+
+   PROJECTS 2+ ONLY
+   2 COLUMNS / 3:4 / NO CROPPING
 =========================================================== */
+
+
+/* ---------- COVER: PROJECTS 2+ ---------- */
 
 .project-gallery-masonry {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    width: 100%;
-    margin-top: 60px;
+    margin-top: 60px !important;
 }
 
+
+/* Якщо cover знаходиться на сторінці з masonry-gallery */
+.project-page:has(.project-gallery-masonry) .project-cover {
+    display: block !important;
+    width: auto !important;
+    max-width: 650px !important;
+    max-height: 500px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto 42px !important;
+}
+
+
+/* ---------- GALLERY: 2 COLUMNS ---------- */
+
+.project-gallery-masonry {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+}
+
+
+/* ---------- 3:4 CELLS ---------- */
+
+.project-gallery-masonry .masonry-item,
 .project-gallery-masonry .gallery-item {
-    display: block;
-    width: 100%;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+    aspect-ratio: 3 / 4 !important;
+
+    overflow: hidden !important;
 }
 
+
+/* ---------- IMAGES: NO CROPPING ---------- */
+
+.project-gallery-masonry .masonry-item img,
 .project-gallery-masonry .gallery-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+
+    margin: 0 !important;
+    transform: none !important;
 }
 
 
-/* ===========================================================
-   TABLET
-=========================================================== */
+/* ---------- HOVER ---------- */
+
+.project-gallery-masonry .masonry-item:hover img,
+.project-gallery-masonry .gallery-item:hover img {
+    opacity: .85 !important;
+    transform: none !important;
+}
+
+
+/* ---------- TABLET ---------- */
 
 @media (max-width: 900px) {
 
     .project-gallery-masonry {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
     }
 
 }
 
 
-/* ===========================================================
-   MOBILE
-=========================================================== */
+/* ---------- MOBILE ---------- */
 
 @media (max-width: 600px) {
 
     .project-gallery-masonry {
-        grid-template-columns: 1fr;
-        gap: 14px;
-        margin-top: 40px;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+        margin-top: 40px !important;
     }
 
-    .project-cover {
-        width: 100%;
-        max-width: 100%;
+    .project-gallery-masonry .masonry-item,
+    .project-gallery-masonry .gallery-item {
+        aspect-ratio: 3 / 4 !important;
     }
 
-}
-
-    .project-gallery-masonry .masonry-item {
-        margin-bottom: 14px;
-    }
 }
