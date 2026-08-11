@@ -1920,91 +1920,77 @@ transform:scale(1.02);
     }
 
 }
-
 /* ===========================================================
-   CV
+   PROJECT COVER
 =========================================================== */
-
-.cv-page .container {
-    max-width: 925px;
-    margin: 0 auto;
-}
-
-.cv-page ul {
-    list-style: disc;
-    padding-left: 22px;
-    margin: 0;
-}
-
-.cv-page li {
-    padding-left: 4px;
-    margin-bottom: 10px;
-}
-
-.cv-page h2 {
-    margin-top: 70px;
-    margin-bottom: 32px;
-}
-
-.cv-page p {
-    margin-bottom: 12px;
-}
 
 .project-cover {
     display: block;
     width: 100%;
-    max-width: 850px;
+    max-width: 650px;
     height: auto;
     margin: 0 auto;
 }
 
 
 /* ===========================================================
-   PROJECT GALLERY — MASONRY / PINTEREST STYLE
+   PROJECT GALLERY — 3 × GRID
    PROJECT 2+
 =========================================================== */
 
 .project-gallery-masonry {
-    columns: 3;
-    column-gap: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
     width: 100%;
+    margin-top: 60px;
 }
 
-.project-gallery-masonry .masonry-item {
+.project-gallery-masonry .gallery-item {
     display: block;
     width: 100%;
-    margin: 0 0 18px 0;
-    break-inside: avoid;
-    -webkit-column-break-inside: avoid;
 }
 
-.project-gallery-masonry .masonry-item img {
+.project-gallery-masonry .gallery-item img {
     display: block;
     width: 100%;
     height: auto;
     max-width: 100%;
 }
 
-/* Tablet */
+
+/* ===========================================================
+   TABLET
+=========================================================== */
+
 @media (max-width: 900px) {
 
     .project-gallery-masonry {
-        columns: 2;
-        column-gap: 14px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
     }
 
-    .project-gallery-masonry .masonry-item {
-        margin-bottom: 14px;
-    }
 }
 
-/* Phone */
+
+/* ===========================================================
+   MOBILE
+=========================================================== */
+
 @media (max-width: 600px) {
 
     .project-gallery-masonry {
-        columns: 1;
-        column-gap: 0;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 40px;
     }
+
+    .project-cover {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
 
     .project-gallery-masonry .masonry-item {
         margin-bottom: 14px;
