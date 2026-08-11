@@ -31,166 +31,141 @@
     >
 
 
-    <style>
+   <style>
 
-        /* =====================================================
-           PROJECT 2 — COVER
-        ===================================================== */
+/* =====================================================
+   PROJECT 2 — COVER
+===================================================== */
 
-        .project2-cover {
+.project2-cover {
+    display: block;
 
-            display: block;
+    width: auto !important;
+    max-width: 600px !important;
 
-            width: 100%;
-            max-width: 850px;
+    height: auto !important;
+    max-height: 650px !important;
 
-            height: auto;
+    margin: 55px auto 42px auto !important;
 
-            margin: 60px auto 45px auto;
-        }
+    object-fit: contain !important;
+}
 
 
-        /* =====================================================
-           PROJECT 2 — GALLERY
-           2 COLUMNS
-           EQUAL 3:4 RECTANGLES
-        ===================================================== */
+/* =====================================================
+   PROJECT 2 — GALLERY
+   2 COLUMNS
+   VERTICAL 3:4
+===================================================== */
 
-        .project2-gallery {
+.project2-gallery {
+    display: grid !important;
 
-            display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 
-            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
 
-            gap: 18px !important;
+    width: 100% !important;
 
-            width: 100% !important;
+    margin: 50px 0 80px 0 !important;
 
-            margin: 55px 0 90px 0 !important;
+    padding: 0 !important;
 
-            padding: 0 !important;
+    columns: unset !important;
+    column-count: unset !important;
+}
 
-            columns: unset !important;
-            column-count: unset !important;
-            column-gap: unset !important;
-        }
 
+/* =====================================================
+   EACH IMAGE
+   SAME VERTICAL 3:4 PROPORTION
+===================================================== */
 
-        /* =====================================================
-           GALLERY ITEM
-        ===================================================== */
+.project2-gallery-item {
+    display: block !important;
 
-        .project2-gallery-item {
+    width: 100% !important;
 
-            display: block !important;
+    aspect-ratio: 3 / 4 !important;
 
-            width: 100% !important;
-            height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
 
-            aspect-ratio: 3 / 4 !important;
+    overflow: hidden !important;
+}
 
-            margin: 0 !important;
-            padding: 0 !important;
 
-            overflow: hidden !important;
+/* =====================================================
+   IMAGE
+===================================================== */
 
-            break-inside: auto !important;
-            -webkit-column-break-inside: auto !important;
-        }
+.project2-gallery-item img {
+    display: block !important;
 
+    width: 100% !important;
+    height: 100% !important;
 
-        /* =====================================================
-           GALLERY IMAGE
+    max-width: none !important;
+    max-height: none !important;
 
-           IMPORTANT:
-           cover = fills every 3:4 rectangle
-        ===================================================== */
+    margin: 0 !important;
+    padding: 0 !important;
 
-        .project2-gallery-item img {
+    object-fit: cover !important;
 
-            display: block !important;
+    aspect-ratio: auto !important;
+}
 
-            width: 100% !important;
-            height: 100% !important;
 
-            max-width: none !important;
-            max-height: none !important;
+/* =====================================================
+   TABLET
+===================================================== */
 
-            margin: 0 !important;
-            padding: 0 !important;
+@media (max-width: 900px) {
 
-            aspect-ratio: auto !important;
+    .project2-cover {
+        max-width: 520px !important;
+        max-height: 600px !important;
+    }
 
-            object-fit: cover !important;
+    .project2-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+    }
 
-            transition: transform .25s ease;
-        }
+}
 
 
-        .project2-gallery-item:hover img {
+/* =====================================================
+   MOBILE
+===================================================== */
 
-            transform: scale(1.015);
-        }
+@media (max-width: 600px) {
 
+    .project2-cover {
+        width: 100% !important;
+        max-width: 100% !important;
+        max-height: none !important;
 
-        /* =====================================================
-           TABLET
-        ===================================================== */
+        margin-top: 40px !important;
+        margin-bottom: 35px !important;
+    }
 
-        @media (max-width: 900px) {
+    .project2-gallery {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
 
-            .project2-cover {
+        margin-top: 40px !important;
+        margin-bottom: 60px !important;
+    }
 
-                max-width: 760px;
+    .project2-gallery-item {
+        aspect-ratio: 3 / 4 !important;
+    }
 
-            }
+}
 
-            .project2-gallery {
-
-                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-
-                gap: 14px !important;
-
-            }
-
-        }
-
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
-
-        @media (max-width: 600px) {
-
-            .project2-cover {
-
-                width: 100%;
-                max-width: 100%;
-
-                margin-top: 40px;
-                margin-bottom: 35px;
-            }
-
-
-            .project2-gallery {
-
-                grid-template-columns: 1fr !important;
-
-                gap: 14px !important;
-
-                margin-top: 40px !important;
-                margin-bottom: 60px !important;
-            }
-
-
-            .project2-gallery-item {
-
-                aspect-ratio: 3 / 4 !important;
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
