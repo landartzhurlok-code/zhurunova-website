@@ -1920,40 +1920,9 @@ transform:scale(1.02);
     }
 
 }
-
 /* ===========================================================
-   PROJECTS 2+ ONLY
-   SMALLER 2-COLUMN GALLERY / 3:4
-=========================================================== */
-
-
-/* ===========================================================
-   COVER
-=========================================================== */
-
-.project-page:has(.project-gallery-masonry) .project-cover {
-    display: block !important;
-    width: auto !important;
-    max-width: 700px !important;
-    max-height: 560px !important;
-    height: auto !important;
-    object-fit: contain !important;
-    margin: 0 auto 42px !important;
-}
-
-.project-page:has(.project-gallery-masonry) .project-cover img {
-    display: block !important;
-    width: auto !important;
-    max-width: 700px !important;
-    max-height: 560px !important;
-    height: auto !important;
-    object-fit: contain !important;
-    margin: 0 auto !important;
-}
-
-/* ===========================================================
-   PROJECT GALLERY — 2 COLUMNS / 3:4
-   PROJECT 2+
+   PROJECT 2+ — GALLERY
+   2 COLUMNS / EQUAL 3:4 RECTANGLES
 =========================================================== */
 
 .project-gallery-masonry {
@@ -1964,37 +1933,47 @@ transform:scale(1.02);
     margin-top: 50px;
 }
 
-.project-gallery-masonry .masonry-item {
+.project-gallery-masonry .gallery-item {
     display: flex;
     align-items: center;
     justify-content: center;
+
     width: 100%;
     aspect-ratio: 3 / 4;
-    overflow: hidden;
-    background: transparent;
+
     margin: 0;
+    padding: 0;
+
+    background: #f7f3ed;
+    overflow: hidden;
 }
 
-.project-gallery-masonry .masonry-item img {
+.project-gallery-masonry .gallery-item img {
     display: block;
+
     width: 100%;
     height: 100%;
+
     object-fit: contain;
 }
 
 
 /* ===========================================================
-   PROJECT COVER — PROJECT 2+
+   COVER — PROJECT 2+
 =========================================================== */
 
-.project-page:has(.project-gallery-masonry) .project-cover {
-    display: block !important;
-    width: auto !important;
-    max-width: 700px !important;
-    max-height: 560px !important;
-    height: auto !important;
-    object-fit: contain !important;
-    margin: 0 auto 42px !important;
+.project-page .project-cover {
+    display: block;
+
+    width: auto;
+    max-width: 700px;
+    max-height: 560px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    margin: 0 auto 42px;
 }
 
 
@@ -2023,8 +2002,10 @@ transform:scale(1.02);
         gap: 14px;
     }
 
-    .project-gallery-masonry .masonry-item {
-        aspect-ratio: 3 / 4;
+    .project-page .project-cover {
+        width: 100%;
+        max-width: 100%;
+        max-height: none;
     }
 
 }
