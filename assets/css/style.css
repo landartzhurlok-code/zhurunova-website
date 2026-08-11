@@ -1934,8 +1934,8 @@ transform:scale(1.02);
 .project-page:has(.project-gallery-masonry) .project-cover {
     display: block !important;
     width: auto !important;
-    max-width: 560px !important;
-    max-height: 420px !important;
+    max-width: 700px !important;
+    max-height: 560px !important;
     height: auto !important;
     object-fit: contain !important;
     margin: 0 auto 42px !important;
@@ -1944,13 +1944,12 @@ transform:scale(1.02);
 .project-page:has(.project-gallery-masonry) .project-cover img {
     display: block !important;
     width: auto !important;
-    max-width: 560px !important;
-    max-height: 420px !important;
+    max-width: 700px !important;
+    max-height: 560px !important;
     height: auto !important;
     object-fit: contain !important;
     margin: 0 auto !important;
 }
-
 
 /* ===========================================================
    GALLERY
