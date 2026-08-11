@@ -11,8 +11,6 @@
     <meta name="description"
         content="Future Reading by Marharyta Zhurunova">
 
-    <!-- FONTS -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -21,193 +19,173 @@
         rel="stylesheet"
     >
 
-    <!-- MAIN CSS -->
-
     <link
         rel="stylesheet"
         href="../assets/css/style.css"
     >
 
     <!-- GLIGHTBOX -->
-
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
     >
 
 
-    <!-- =======================================================
-         PROJECT 2+ ONLY
-         GALLERY: 2 COLUMNS / EQUAL 3:4 BOXES
-    ======================================================== -->
-
     <style>
 
-        /* =======================================================
-           PROJECT PAGE
-        ======================================================== */
+        /* =====================================================
+           PROJECT 2 — COVER
+        ===================================================== */
 
-        .project-page {
-            width: 100%;
-        }
-
-
-        /* =======================================================
-           COVER
-        ======================================================== */
-
-        .project-page .project-cover {
+        .project2-cover {
 
             display: block;
 
-            width: auto;
+            width: 100%;
             max-width: 850px;
-            max-height: 650px;
 
             height: auto;
 
-            margin: 64px auto 42px auto;
-
-            object-fit: contain;
+            margin: 60px auto 45px auto;
         }
 
 
-        /* =======================================================
-           GALLERY
-        ======================================================== */
+        /* =====================================================
+           PROJECT 2 — GALLERY
+           2 COLUMNS
+           EQUAL 3:4 RECTANGLES
+        ===================================================== */
 
-        .project-gallery-masonry {
+        .project2-gallery {
 
-            display: grid;
+            display: grid !important;
 
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 
-            gap: 18px;
+            gap: 18px !important;
 
-            width: 100%;
+            width: 100% !important;
 
-            margin-top: 55px;
-            margin-bottom: 90px;
+            margin: 55px 0 90px 0 !important;
 
-            padding: 0;
+            padding: 0 !important;
 
-            /* IMPORTANT:
-               disable old masonry columns */
-            columns: unset;
-            column-count: unset;
-            column-gap: unset;
+            columns: unset !important;
+            column-count: unset !important;
+            column-gap: unset !important;
         }
 
 
-        /* =======================================================
-           EVERY GALLERY CELL
-        ======================================================== */
+        /* =====================================================
+           GALLERY ITEM
+        ===================================================== */
 
-        .project-gallery-masonry .gallery-item {
+        .project2-gallery-item {
 
-            display: flex;
+            display: block !important;
 
-            width: 100%;
+            width: 100% !important;
+            height: auto !important;
 
-            aspect-ratio: 3 / 4;
+            aspect-ratio: 3 / 4 !important;
 
             margin: 0 !important;
             padding: 0 !important;
 
-            overflow: hidden;
+            overflow: hidden !important;
 
-            align-items: center;
-            justify-content: center;
-
-            background: transparent;
-
-            break-inside: auto;
-            -webkit-column-break-inside: auto;
+            break-inside: auto !important;
+            -webkit-column-break-inside: auto !important;
         }
 
 
-        /* =======================================================
-           IMAGE
-        ======================================================== */
+        /* =====================================================
+           GALLERY IMAGE
 
-        .project-gallery-masonry .gallery-item img {
+           IMPORTANT:
+           cover = fills every 3:4 rectangle
+        ===================================================== */
 
-            display: block;
+        .project2-gallery-item img {
 
-            width: 100%;
-            height: 100%;
+            display: block !important;
 
-            max-width: 100%;
-            max-height: 100%;
+            width: 100% !important;
+            height: 100% !important;
 
-            margin: 0;
-            padding: 0;
+            max-width: none !important;
+            max-height: none !important;
 
-            object-fit: contain;
+            margin: 0 !important;
+            padding: 0 !important;
 
-            cursor: pointer;
+            aspect-ratio: auto !important;
+
+            object-fit: cover !important;
+
+            transition: transform .25s ease;
         }
 
 
-        /* =======================================================
+        .project2-gallery-item:hover img {
+
+            transform: scale(1.015);
+        }
+
+
+        /* =====================================================
            TABLET
-        ======================================================== */
+        ===================================================== */
 
         @media (max-width: 900px) {
 
-            .project-page .project-cover {
+            .project2-cover {
 
-                max-width: 750px;
-                max-height: 600px;
+                max-width: 760px;
 
             }
 
+            .project2-gallery {
 
-            .project-gallery-masonry {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-
-                gap: 14px;
+                gap: 14px !important;
 
             }
 
         }
 
 
-        /* =======================================================
+        /* =====================================================
            MOBILE
-        ======================================================== */
+        ===================================================== */
 
         @media (max-width: 600px) {
 
-            .project-page .project-cover {
+            .project2-cover {
 
                 width: 100%;
                 max-width: 100%;
-                max-height: none;
 
                 margin-top: 40px;
-                margin-bottom: 32px;
-
+                margin-bottom: 35px;
             }
 
 
-            .project-gallery-masonry {
+            .project2-gallery {
 
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr !important;
 
-                gap: 14px;
+                gap: 14px !important;
 
-                margin-top: 40px;
-                margin-bottom: 60px;
-
+                margin-top: 40px !important;
+                margin-bottom: 60px !important;
             }
 
 
-            .project-gallery-masonry .gallery-item {
+            .project2-gallery-item {
 
-                aspect-ratio: 3 / 4;
-
+                aspect-ratio: 3 / 4 !important;
             }
 
         }
@@ -228,7 +206,10 @@
 
     <div class="container header-container">
 
-        <a href="../index.html" class="logo">
+        <a
+            href="../index.html"
+            class="logo"
+        >
 
             <span class="logo-name">
                 MARHARYTA<br>
@@ -240,23 +221,38 @@
 
         <nav class="navigation">
 
-            <a href="../index.html" class="nav-link">
+            <a
+                href="../index.html"
+                class="nav-link"
+            >
                 About
             </a>
 
-            <a href="../cv.html" class="nav-link">
+            <a
+                href="../cv.html"
+                class="nav-link"
+            >
                 CV
             </a>
 
-            <a href="../portfolio.html" class="nav-link">
+            <a
+                href="../portfolio.html"
+                class="nav-link"
+            >
                 Projects
             </a>
 
-            <a href="../works.html" class="nav-link">
+            <a
+                href="../works.html"
+                class="nav-link"
+            >
                 Works
             </a>
 
-            <a href="../index.html#contact" class="nav-link">
+            <a
+                href="../index.html#contact"
+                class="nav-link"
+            >
                 Contact
             </a>
 
@@ -283,7 +279,7 @@
         ====================================================== -->
 
         <img
-            class="project-cover"
+            class="project2-cover"
             src="../assets/images/projects/project2_cover.jpg"
             alt="Future Reading"
         >
@@ -361,18 +357,17 @@
         <!-- =====================================================
              GALLERY
              2 COLUMNS
-             EVERY CELL = 3:4
-             NO CROPPING
+             3:4 RECTANGLES
         ====================================================== -->
 
-        <div class="project-gallery-masonry">
+        <div class="project2-gallery">
 
 
             <!-- IMAGE 1 -->
 
             <a
                 href="../assets/images/projects/project2_1.jpg"
-                class="gallery-item"
+                class="project2-gallery-item"
                 data-glightbox="gallery-project2"
             >
 
@@ -388,7 +383,7 @@
 
             <a
                 href="../assets/images/projects/project2_2.jpg"
-                class="gallery-item"
+                class="project2-gallery-item"
                 data-glightbox="gallery-project2"
             >
 
@@ -404,7 +399,7 @@
 
             <a
                 href="../assets/images/projects/project2_3.jpg"
-                class="gallery-item"
+                class="project2-gallery-item"
                 data-glightbox="gallery-project2"
             >
 
@@ -420,7 +415,7 @@
 
             <a
                 href="../assets/images/projects/project2_4.jpg"
-                class="gallery-item"
+                class="project2-gallery-item"
                 data-glightbox="gallery-project2"
             >
 
@@ -460,17 +455,19 @@
 
 
 <!-- =========================================================
-     GLIGHTBOX JS
+     GLIGHTBOX
 ========================================================= -->
 
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js">
+</script>
 
 
 <script>
 
-    const lightbox = GLightbox({
+    GLightbox({
 
-        selector: '.gallery-item',
+        selector: '.project2-gallery-item',
 
         touchNavigation: true,
 
