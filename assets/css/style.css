@@ -1923,58 +1923,84 @@ transform:scale(1.02);
 
 /* ===========================================================
    PROJECTS 2+ ONLY
-   2 COLUMNS / 3:4 / NO CROPPING
+   SMALLER 2-COLUMN GALLERY / 3:4
 =========================================================== */
 
 
-/* ---------- COVER: PROJECTS 2+ ---------- */
+/* ===========================================================
+   COVER
+=========================================================== */
 
-.project-gallery-masonry {
-    margin-top: 60px !important;
-}
-
-
-/* Якщо cover знаходиться на сторінці з masonry-gallery */
 .project-page:has(.project-gallery-masonry) .project-cover {
     display: block !important;
     width: auto !important;
-    max-width: 650px !important;
-    max-height: 500px !important;
+    max-width: 560px !important;
+    max-height: 420px !important;
     height: auto !important;
     object-fit: contain !important;
     margin: 0 auto 42px !important;
 }
 
+.project-page:has(.project-gallery-masonry) .project-cover img {
+    display: block !important;
+    width: auto !important;
+    max-width: 560px !important;
+    max-height: 420px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+}
 
-/* ---------- GALLERY: 2 COLUMNS ---------- */
+
+/* ===========================================================
+   GALLERY
+   IMPORTANT: THE WHOLE GALLERY IS SMALLER
+=========================================================== */
 
 .project-gallery-masonry {
     display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+    grid-template-columns: repeat(2, 1fr) !important;
+
     gap: 18px !important;
+
     width: 100% !important;
+
+    max-width: 650px !important;
+
+    margin: 60px auto 0 !important;
 }
 
 
-/* ---------- 3:4 CELLS ---------- */
+/* ===========================================================
+   3:4 IMAGE AREAS
+=========================================================== */
 
 .project-gallery-masonry .masonry-item,
 .project-gallery-masonry .gallery-item {
+
     display: flex !important;
+
+    width: 100% !important;
+
+    aspect-ratio: 3 / 4 !important;
+
     align-items: center !important;
     justify-content: center !important;
 
-    width: 100% !important;
-    aspect-ratio: 3 / 4 !important;
-
     overflow: hidden !important;
+
+    margin: 0 !important;
 }
 
 
-/* ---------- IMAGES: NO CROPPING ---------- */
+/* ===========================================================
+   IMAGES — NEVER CROP
+=========================================================== */
 
 .project-gallery-masonry .masonry-item img,
 .project-gallery-masonry .gallery-item img {
+
     display: block !important;
 
     width: 100% !important;
@@ -1983,44 +2009,82 @@ transform:scale(1.02);
     object-fit: contain !important;
 
     margin: 0 !important;
+
     transform: none !important;
+
+    transition: opacity .25s ease !important;
 }
 
-
-/* ---------- HOVER ---------- */
 
 .project-gallery-masonry .masonry-item:hover img,
 .project-gallery-masonry .gallery-item:hover img {
+
     opacity: .85 !important;
+
     transform: none !important;
 }
 
 
-/* ---------- TABLET ---------- */
+/* ===========================================================
+   TABLET
+=========================================================== */
 
 @media (max-width: 900px) {
 
+    .project-page:has(.project-gallery-masonry) .project-cover,
+    .project-page:has(.project-gallery-masonry) .project-cover img {
+
+        max-width: 500px !important;
+        max-height: 400px !important;
+
+    }
+
     .project-gallery-masonry {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        max-width: 600px !important;
+
+        grid-template-columns: repeat(2, 1fr) !important;
+
         gap: 14px !important;
+
     }
 
 }
 
 
-/* ---------- MOBILE ---------- */
+/* ===========================================================
+   PHONE
+=========================================================== */
 
 @media (max-width: 600px) {
 
+    .project-page:has(.project-gallery-masonry) .project-cover,
+    .project-page:has(.project-gallery-masonry) .project-cover img {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        max-height: none !important;
+
+    }
+
     .project-gallery-masonry {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
         grid-template-columns: 1fr !important;
+
         gap: 14px !important;
+
         margin-top: 40px !important;
+
     }
 
     .project-gallery-masonry .masonry-item,
     .project-gallery-masonry .gallery-item {
+
         aspect-ratio: 3 / 4 !important;
+
     }
 
 }
