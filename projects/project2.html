@@ -24,6 +24,67 @@
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
+
+    <style>
+        /* PROJECT 2+ — PINTEREST / MASONRY GALLERY */
+
+        .project-gallery-masonry {
+            columns: 3;
+            column-gap: 18px;
+            width: 100%;
+        }
+
+        .project-gallery-masonry .gallery-item {
+            display: block;
+            width: 100%;
+            margin: 0 0 18px;
+            break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+        }
+
+        .project-gallery-masonry .gallery-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
+
+        /* COVER — smaller, proportional, never cropped */
+
+        .project-cover {
+            display: block;
+            width: 100%;
+            max-width: 850px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 900px) {
+            .project-gallery-masonry {
+                columns: 2;
+                column-gap: 14px;
+            }
+
+            .project-gallery-masonry .gallery-item {
+                margin-bottom: 14px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .project-gallery-masonry {
+                columns: 1;
+            }
+
+            .project-gallery-masonry .gallery-item {
+                margin-bottom: 14px;
+            }
+
+            .project-cover {
+                width: 100%;
+            }
+        }
+    </style>
+
 </head>
 
 
@@ -149,13 +210,12 @@
 
         <!-- GALLERY -->
 
-        <div class="project-gallery">
+        <div class="project-gallery-masonry">
 
 
             <a
                 href="../assets/images/projects/project2_1.jpg"
                 class="gallery-item"
-                data-glightbox="title: Future Reading;"
             >
 
                 <img
@@ -169,7 +229,6 @@
             <a
                 href="../assets/images/projects/project2_2.jpg"
                 class="gallery-item"
-                data-glightbox="title: Future Reading;"
             >
 
                 <img
@@ -183,7 +242,6 @@
             <a
                 href="../assets/images/projects/project2_3.jpg"
                 class="gallery-item"
-                data-glightbox="title: Future Reading;"
             >
 
                 <img
@@ -197,7 +255,6 @@
             <a
                 href="../assets/images/projects/project2_4.jpg"
                 class="gallery-item"
-                data-glightbox="title: Future Reading;"
             >
 
                 <img
