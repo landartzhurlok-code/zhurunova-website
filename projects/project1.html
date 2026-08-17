@@ -18,26 +18,20 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet"
+    <link
+        rel="stylesheet"
         href="../assets/css/style.css">
 
-    <link rel="stylesheet"
+    <link
+        rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
 
     <!-- =========================================================
-         PROJECT 1 — OVERRIDE
-         These rules affect ONLY this page
+         PROJECT 1 ONLY
     ========================================================== -->
 
     <style>
-
-        /* PAGE */
-
-        .project1-page {
-            width: 100%;
-        }
-
 
         /* COVER */
 
@@ -50,7 +44,7 @@
         }
 
 
-        /* PROJECT TEXT */
+        /* TEXT */
 
         .project1-page .project-text {
             max-width: 760px;
@@ -59,64 +53,89 @@
         }
 
 
-        /* GALLERY */
+        /* =====================================================
+           PROJECT 1 GALLERY
+        ===================================================== */
 
-        .project1-page .project-gallery {
+        .project1-page .project1-gallery {
             display: grid !important;
+
             grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
             gap: 18px !important;
 
-            width: 100%;
-            margin-top: 70px;
-            margin-bottom: 80px;
+            width: 100% !important;
+
+            margin-top: 70px !important;
+            margin-bottom: 80px !important;
         }
 
 
-        /* GALLERY ITEMS */
+        /* EACH IMAGE */
 
-        .project1-page .project-gallery .gallery-item {
+        .project1-page .project1-gallery .gallery-item {
             display: block !important;
+
             width: 100% !important;
+
             margin: 0 !important;
             padding: 0 !important;
 
-            aspect-ratio: auto !important;
             height: auto !important;
+
+            aspect-ratio: auto !important;
 
             overflow: visible !important;
         }
 
 
-        /* IMAGES */
+        /* IMAGE ITSELF */
 
-        .project1-page .project-gallery .gallery-item img {
+        .project1-page .project1-gallery .gallery-item img {
+
             display: block !important;
 
             width: 100% !important;
+
             height: auto !important;
 
             max-width: 100% !important;
 
-            object-fit: contain !important;
+            max-height: none !important;
+
             aspect-ratio: auto !important;
+
+            object-fit: initial !important;
         }
 
 
-        /* MOBILE */
+        /* =====================================================
+           MOBILE
+        ===================================================== */
 
         @media (max-width: 700px) {
 
             .project1-page .project-cover {
+
                 width: 100%;
+
                 max-width: 100%;
+
                 margin-bottom: 40px;
+
             }
 
-            .project1-page .project-gallery {
+
+            .project1-page .project1-gallery {
+
                 grid-template-columns: 1fr !important;
+
                 gap: 16px !important;
-                margin-top: 50px;
-                margin-bottom: 60px;
+
+                margin-top: 50px !important;
+
+                margin-bottom: 60px !important;
+
             }
 
         }
@@ -178,7 +197,9 @@
     <div class="container narrow">
 
 
-        <!-- COVER -->
+        <!-- =====================================================
+             COVER
+        ====================================================== -->
 
         <img
             class="project-cover"
@@ -187,7 +208,9 @@
         >
 
 
-        <!-- TITLE -->
+        <!-- =====================================================
+             TITLE
+        ====================================================== -->
 
         <div class="project-header">
 
@@ -202,7 +225,9 @@
         </div>
 
 
-        <!-- TEXT -->
+        <!-- =====================================================
+             TEXT
+        ====================================================== -->
 
         <div class="project-text">
 
@@ -231,9 +256,13 @@
         </div>
 
 
-        <!-- GALLERY -->
+        <!-- =====================================================
+             GALLERY
+             IMPORTANT: project1-gallery
+             NOT project-gallery
+        ====================================================== -->
 
-        <div class="project-gallery">
+        <div class="project1-gallery">
 
 
             <a
@@ -397,6 +426,10 @@
 </footer>
 
 
+
+<!-- =========================================================
+     GLIGHTBOX
+========================================================== -->
 
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
