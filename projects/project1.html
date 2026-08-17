@@ -14,15 +14,114 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet"
         href="../assets/css/style.css">
 
-    <!-- GLightbox CSS -->
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+
+    <!-- =========================================================
+         PROJECT 1 — OVERRIDE
+         These rules affect ONLY this page
+    ========================================================== -->
+
+    <style>
+
+        /* PAGE */
+
+        .project1-page {
+            width: 100%;
+        }
+
+
+        /* COVER */
+
+        .project1-page .project-cover {
+            display: block;
+            width: 100%;
+            max-width: 850px;
+            height: auto;
+            margin: 0 auto 60px auto;
+        }
+
+
+        /* PROJECT TEXT */
+
+        .project1-page .project-text {
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* GALLERY */
+
+        .project1-page .project-gallery {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 18px !important;
+
+            width: 100%;
+            margin-top: 70px;
+            margin-bottom: 80px;
+        }
+
+
+        /* GALLERY ITEMS */
+
+        .project1-page .project-gallery .gallery-item {
+            display: block !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+
+            aspect-ratio: auto !important;
+            height: auto !important;
+
+            overflow: visible !important;
+        }
+
+
+        /* IMAGES */
+
+        .project1-page .project-gallery .gallery-item img {
+            display: block !important;
+
+            width: 100% !important;
+            height: auto !important;
+
+            max-width: 100% !important;
+
+            object-fit: contain !important;
+            aspect-ratio: auto !important;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .project1-page .project-cover {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 40px;
+            }
+
+            .project1-page .project-gallery {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+                margin-top: 50px;
+                margin-bottom: 60px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -35,11 +134,14 @@
     <div class="container header-container">
 
         <a href="../index.html" class="logo">
+
             <span class="logo-name">
                 MARHARYTA<br>
                 ZHURUNOVA
             </span>
+
         </a>
+
 
         <nav class="navigation">
 
@@ -71,7 +173,7 @@
 
 
 
-<main class="project-page">
+<main class="project-page project1-page">
 
     <div class="container narrow">
 
@@ -83,7 +185,6 @@
             src="../assets/images/projects/project1_cover.jpg"
             alt="Disappearing Landscapes"
         >
-
 
 
         <!-- TITLE -->
@@ -99,7 +200,6 @@
             </p>
 
         </div>
-
 
 
         <!-- TEXT -->
@@ -119,7 +219,9 @@
             </p>
 
             <p>
-                In this project, I aim to create a series of <em>“disappearing landscapes,”</em> distilled to the essence of my memory. The uncertainty and dreamlike nature of these images are enhanced by the technique I use — hand-printed monotype. It gives the works an unearthly, almost sacred quality, like ancient icons that have outlived their saints.
+                In this project, I aim to create a series of
+                <em>“disappearing landscapes,”</em>
+                distilled to the essence of my memory. The uncertainty and dreamlike nature of these images are enhanced by the technique I use — hand-printed monotype. It gives the works an unearthly, almost sacred quality, like ancient icons that have outlived their saints.
             </p>
 
             <p>
@@ -127,7 +229,6 @@
             </p>
 
         </div>
-
 
 
         <!-- GALLERY -->
@@ -140,10 +241,12 @@
                 class="gallery-item"
                 data-glightbox="title: Disappearing Landscapes;"
             >
+
                 <img
                     src="../assets/images/projects/project1_1.jpg"
                     alt="Disappearing Landscapes"
                 >
+
             </a>
 
 
@@ -152,10 +255,12 @@
                 class="gallery-item"
                 data-glightbox="title: Disappearing Landscapes;"
             >
+
                 <img
                     src="../assets/images/projects/project1_2.jpg"
                     alt="Disappearing Landscapes"
                 >
+
             </a>
 
 
@@ -164,10 +269,12 @@
                 class="gallery-item"
                 data-glightbox="title: Disappearing Landscapes;"
             >
+
                 <img
                     src="../assets/images/projects/project1_3.jpg"
                     alt="Disappearing Landscapes"
                 >
+
             </a>
 
 
@@ -176,10 +283,12 @@
                 class="gallery-item"
                 data-glightbox="title: Disappearing Landscapes;"
             >
+
                 <img
                     src="../assets/images/projects/project1_4.jpg"
                     alt="Disappearing Landscapes"
                 >
+
             </a>
 
 
@@ -188,10 +297,12 @@
                 class="gallery-item"
                 data-glightbox="title: Disappearing Landscapes;"
             >
+
                 <img
                     src="../assets/images/projects/project1_5.jpg"
                     alt="Disappearing Landscapes"
                 >
+
             </a>
 
 
@@ -200,10 +311,12 @@
                 class="gallery-item"
                 data-glightbox="title: Disappearing Landscapes;"
             >
+
                 <img
                     src="../assets/images/projects/project1_6.JPG"
                     alt="Disappearing Landscapes"
                 >
+
             </a>
 
 
@@ -212,10 +325,12 @@
                 class="gallery-item"
                 data-glightbox="title: Disappearing Landscapes;"
             >
+
                 <img
                     src="../assets/images/projects/project1_7.JPG"
                     alt="Disappearing Landscapes"
                 >
+
             </a>
 
 
@@ -224,10 +339,12 @@
                 class="gallery-item"
                 data-glightbox="title: Disappearing Landscapes;"
             >
+
                 <img
                     src="../assets/images/projects/project1_8.JPG"
                     alt="Disappearing Landscapes"
                 >
+
             </a>
 
 
@@ -236,10 +353,12 @@
                 class="gallery-item"
                 data-glightbox="title: Disappearing Landscapes;"
             >
+
                 <img
                     src="../assets/images/projects/project1_9.JPG"
                     alt="Disappearing Landscapes"
                 >
+
             </a>
 
 
@@ -248,10 +367,12 @@
                 class="gallery-item"
                 data-glightbox="title: Disappearing Landscapes;"
             >
+
                 <img
                     src="../assets/images/projects/project1_10.JPG"
                     alt="Disappearing Landscapes"
                 >
+
             </a>
 
 
@@ -277,15 +398,13 @@
 
 
 
-<!-- GLightbox JS -->
-
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
 
 const lightbox = GLightbox({
 
-    selector: '.gallery-item',
+    selector: '.project1-page .gallery-item',
 
     touchNavigation: true,
 
